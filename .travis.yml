@@ -1,12 +1,9 @@
 language: java
-
+install: mvn install
 dist: focal
 
 jdk:
   - openjdk14
-
-script:
-  - mvn test
 
 sudo: false
 
