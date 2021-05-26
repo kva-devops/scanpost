@@ -1,7 +1,4 @@
 language: java
-install: true
-script:
-  - mvn install
 
 dist: focal
 
@@ -20,6 +17,6 @@ after_success:
 notifications:
   email:
     recipients:
-      - vldmrqst@gmail.com
+      - kva.devops@gmail.com
     on_success: never
     on_failure: always
