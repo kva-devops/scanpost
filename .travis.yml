@@ -1,5 +1,7 @@
 language: java
 
+dist: focal
+
 jdk:
   - openjdk14
 
