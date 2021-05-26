@@ -20,3 +20,6 @@ notifications:
       - kva.devops@gmail.com
     on_success: never
     on_failure: always
+
+script:
+  - mvn test -B
