@@ -5,6 +5,12 @@ dist: focal
 jdk:
   - openjdk14
 
+install:
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+
+script:
+  - mvn test
+
 sudo: false
 
 env:
@@ -20,6 +26,3 @@ notifications:
       - kva.devops@gmail.com
     on_success: never
     on_failure: always
-
-script:
-  - mvn test -B
