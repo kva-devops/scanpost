@@ -42,16 +42,11 @@ public class Scanpost {
      * @return возвращает карту "Емаил - Список пользователей"
      */
     private Map<String, List<String>> reverseIndexMap(Map<String, Set<String>> map) {
-        Set<Map.Entry<String, Set<String>>> buff = map.entrySet();
-        Map<Set<String>, String> mapEmails = new HashMap<>();
-        for (Map.Entry<String, Set<String>> elem : buff) {
-            mapEmails.put(elem.getValue(), elem.getKey());
-        }
         Map<String, List<String>> mapOneMail = new HashMap<>();
         List<String> listMails = new ArrayList<>();
-        for (Set<String> elem : mapEmails.keySet()) {
-            listMails.add(mapEmails.get(elem));
-            listMails.addAll(elem);
+        for (String elem : map.keySet()) {
+            listMails.add(elem);
+            listMails.addAll(map.get(elem));
         }
         List<String> buffNameList = new ArrayList<>();
         for (String elemMail : listMails) {
